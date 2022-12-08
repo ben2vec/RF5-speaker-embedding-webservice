@@ -21,13 +21,8 @@ js = r.json()
 print(js["text"])
 
 r = requests.post(embed_url, files={"audio_file": raw_audio, "whisper_file": r.content})
-
 assert r.ok
 
-vecs = np.array(r.json())
-print(vecs)
-sim = cosine_similarity(vecs)
-print(sim)
-
-sim = euclidean_distances(vecs)
+vecs = r.json()
+sim = np.round(cosine_similarity(vecs), 2)
 print(sim)

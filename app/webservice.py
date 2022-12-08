@@ -32,13 +32,6 @@ model = torch.hub.load("RF5/simple-speaker-embedding", "convgru_embedder", devic
 model.eval()
 model_lock = Lock()
 
-# model_name= os.getenv("ASR_MODEL", "base")
-# if torch.cuda.is_available():
-#    model = whisper.load_model(model_name).cuda()
-# else:
-#    model = whisper.load_model(model_name)
-# model_lock = Lock()
-
 
 @app.get("/", response_class=RedirectResponse, include_in_schema=False)
 async def index():
@@ -55,19 +48,20 @@ def transcribe(
     df = pd.DataFrame(js["segments"]).set_index("id")
     audio = load_audio(audio_file.file)
     wav = torch.from_numpy(audio).float()
-    
+
     X = []
     for idx, row in tqdm(df.iterrows()):
-        sr0 = int(SAMPLE_RATE*row.start)
-        sr1 = int(SAMPLE_RATE*row.end)
-        w1 = audio[sr0:sr1]
-        
+        sr0 = int(SAMPLE_RATE * row.start)
+        sr1 = int(SAMPLE_RATE * row.end)
+        w1 = wav[sr0:sr1]
+
         with model_lock:
             embedding = model(w1[None]).detach().cpu().numpy().ravel()
 
         X.append(embedding.tolist())
 
     return X
+
 
 def load_audio(file: BinaryIO, sr: int = SAMPLE_RATE):
     """
@@ -89,14 +83,17 @@ def load_audio(file: BinaryIO, sr: int = SAMPLE_RATE):
         out, _ = (
             ffmpeg.input("pipe:", threads=0)
             .output("-", format="s16le", acodec="pcm_s16le", ac=1, ar=sr)
-            .run(cmd="ffmpeg", capture_stdout=True, capture_stderr=True, input=file.read())
+            .run(
+                cmd="ffmpeg",
+                capture_stdout=True,
+                capture_stderr=True,
+                input=file.read(),
+            )
         )
     except ffmpeg.Error as e:
         raise RuntimeError(f"Failed to load audio: {e.stderr.decode()}") from e
 
     return np.frombuffer(out, np.int16).flatten().astype(np.float32) / 32768.0
-
-
 
 
 """
