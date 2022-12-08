@@ -1,4 +1,4 @@
-# Dockerized webservice for Simple speaker embeddings
+#  Simple speaker embeddings webservice
 
 Source repo: https://github.com/RF5/simple-speaker-embedding
 
@@ -55,6 +55,8 @@ print(sim)
  [0.61 0.56 0.7  0.38 0.5  1.   0.06]
  [0.24 0.05 0.11 0.16 0.17 0.06 1.  ]]
 ```
+
+Note the high dissimilarity of the final segment, indicating a good chance that the speaker is different to the first six segments.
 
 ### References
 
