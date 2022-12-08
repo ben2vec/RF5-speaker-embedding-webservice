@@ -15,10 +15,9 @@ with open(f_audio, "rb") as FIN:
     raw_audio = FIN.read()
 
 r = requests.post(whisper_url, files={"audio_file": raw_audio})
-
 assert r.ok
-js = r.json()
 
+js = r.json()
 print(js["text"])
 
 r = requests.post(embed_url, files={"audio_file": raw_audio, "whisper_file": r.content})

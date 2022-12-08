@@ -63,7 +63,7 @@ def transcribe(
         w1 = audio[sr0:sr1]
         
         with model_lock:
-            embedding = model(wav[None]).detach().cpu().numpy().ravel()
+            embedding = model(w1[None]).detach().cpu().numpy().ravel()
 
         X.append(embedding.tolist())
 

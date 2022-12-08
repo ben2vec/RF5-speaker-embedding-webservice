@@ -2,15 +2,14 @@ import requests
 import json
 from pathlib import Path
 
-name = "clip1"
+name = "AndreIguodala_ESPN"
 
-src_dir = Path("../../data/")
+src_dir = Path("..")
 f_whisper = src_dir / "transcribe" / Path(name).with_suffix(".json")
 assert f_whisper.exists()
 
 f_audio = src_dir / "raw" / Path(name).with_suffix(".mp3")
 assert f_audio.exists()
-
 url = "http://localhost:8000/embed"
 
 with open(f_whisper, "rb") as FIN:

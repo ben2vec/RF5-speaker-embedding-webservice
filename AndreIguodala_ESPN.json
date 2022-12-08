@@ -1,0 +1,173 @@
+{
+  "text": " I want Iguodala. That's right. And I know what that sounds like. And it's not fair to Steph because so much defensive attention is paid to him. And I'm not saying Steph's not a better shooter. He's a way better shooter. Iguodala's got ice water in his veins. My money is on number 30.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": " I want Iguodala. That's right.",
+      "tokens": [
+        286,
+        528,
+        286,
+        2794,
+        378,
+        5159,
+        13,
+        663,
+        311,
+        558,
+        13
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2076083408312851,
+      "compression_ratio": 1.518716577540107,
+      "no_speech_prob": 0.052352290600538254
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.0,
+      "end": 4.5,
+      "text": " And I know what that sounds like.",
+      "tokens": [
+        400,
+        286,
+        458,
+        437,
+        300,
+        3263,
+        411,
+        13
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2076083408312851,
+      "compression_ratio": 1.518716577540107,
+      "no_speech_prob": 0.052352290600538254
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.5,
+      "end": 8.2,
+      "text": " And it's not fair to Steph because so much defensive attention is paid to him.",
+      "tokens": [
+        400,
+        309,
+        311,
+        406,
+        3143,
+        281,
+        31418,
+        570,
+        370,
+        709,
+        16468,
+        3202,
+        307,
+        4835,
+        281,
+        796,
+        13
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2076083408312851,
+      "compression_ratio": 1.518716577540107,
+      "no_speech_prob": 0.052352290600538254
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.2,
+      "end": 10.0,
+      "text": " And I'm not saying Steph's not a better shooter.",
+      "tokens": [
+        400,
+        286,
+        478,
+        406,
+        1566,
+        31418,
+        311,
+        406,
+        257,
+        1101,
+        24680,
+        13
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2076083408312851,
+      "compression_ratio": 1.518716577540107,
+      "no_speech_prob": 0.052352290600538254
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 10.0,
+      "end": 11.6,
+      "text": " He's a way better shooter.",
+      "tokens": [
+        634,
+        311,
+        257,
+        636,
+        1101,
+        24680,
+        13
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2076083408312851,
+      "compression_ratio": 1.518716577540107,
+      "no_speech_prob": 0.052352290600538254
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 11.6,
+      "end": 13.8,
+      "text": " Iguodala's got ice water in his veins.",
+      "tokens": [
+        286,
+        2794,
+        378,
+        5159,
+        311,
+        658,
+        4435,
+        1281,
+        294,
+        702,
+        29390,
+        13
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2076083408312851,
+      "compression_ratio": 1.518716577540107,
+      "no_speech_prob": 0.052352290600538254
+    },
+    {
+      "id": 6,
+      "seek": 1380,
+      "start": 13.8,
+      "end": 30.8,
+      "text": " My money is on number 30.",
+      "tokens": [
+        50364,
+        1222,
+        1460,
+        307,
+        322,
+        1230,
+        2217,
+        13,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3603279829025269,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 0.0004936965415254235
+    }
+  ],
+  "language": "en"
+}
