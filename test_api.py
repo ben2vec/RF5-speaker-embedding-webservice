@@ -1,7 +1,7 @@
 import requests
 import json
 import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances
+from sklearn.metrics.pairwise import cosine_similarity
 
 WHISPER_PORT = 9000
 EMBED_PORT = 9001
