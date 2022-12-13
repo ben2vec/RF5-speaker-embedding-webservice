@@ -7,8 +7,8 @@ Source repo: https://github.com/RF5/simple-speaker-embedding
 Start the docker containers, one for OpenAI's [Whisper](https://github.com/ahmetoner/whisper-asr-webservice) model and one for RF5.
 
 ```
-docker run -p -d 9000:9000 -e ASR_MODEL=medium thoppe/openai-whisper-asr-webservice-predownload-medium:12-08-2022
-docker run -p -d 9001:9000 thoppe/rf5_speaker_embedding_webservice
+docker run -d -p 9000:9000 -e ASR_MODEL=medium thoppe/openai-whisper-asr-webservice-predownload-medium:12-08-2022
+docker run -d -p 9001:9000 thoppe/rf5_speaker_embedding_webservice
 ```
 
 ### Sample code [test_api.py](test_api.py)
